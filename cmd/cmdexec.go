@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func cmdExec(command string, panicOnError bool) ([]byte, error) {
+func CmdExec(command string, panicOnError bool) ([]byte, error) {
 	fmt.Printf("running %s\n", command)
 	commandAndArgs := strings.Split(command, " ")
 	cmd := exec.Command(commandAndArgs[0], commandAndArgs[1:]...)
